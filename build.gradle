@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'edu.sc.seis.launch4j' version '2.5.3'
+}
+
+group 'de.butting'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+launch4j {
+    mainClassName = 'de.butting.application.Main'
+    icon = "${projectDir}/src/main/resources/Butting-Logo.png"
+}
+
+dependencies {
+    implementation group: 'net.java.abeille', name: 'abeille', version: '3.0'
+    implementation group: 'org.apache.batik', name: 'com.springsource.org.apache.batik.ext.awt', version: '1.7.0'
+    implementation group: 'com.google.zxing', name: 'javase', version: '3.3.0'
+    implementation group: 'net.sf.launch4j', name: 'launch4j', version: '3.14'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}

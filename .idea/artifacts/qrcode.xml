@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" build-on-make="true" name="qrcode">
+    <output-path>$PROJECT_DIR$/out/artifacts/qrcode</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="de.butting.application.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="qrcode.jar">
+        <element id="module-output" name="qrcode" />
+      </element>
+    </root>
+  </artifact>
+</component>
