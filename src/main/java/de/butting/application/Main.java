@@ -7,33 +7,31 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
- *
  * @author Daniel Niebuhr
- *
  */
 
 public class Main extends Application {
 
-	@Override
-	public void start(Stage primaryStage) {
-		try {
+    public static void main(String[] args) {
+        launch(args);
+    }
 
-			MainViewController mainMenuViewController = new MainViewController();
-			Scene mainMenuScene = new Scene(mainMenuViewController.getView(), 1000, 600);
-			primaryStage.setResizable(false);
-			primaryStage.setTitle("Butting QR Generator");
-			primaryStage.getIcons()
-					.add(new Image("file:src/main/resources/Butting-Logo.png"));
-			primaryStage.setScene(mainMenuScene);
-			primaryStage.show();
+    @Override
+    public void start(Stage primaryStage) {
+        try {
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+            MainViewController mainMenuViewController = new MainViewController();
+            Scene mainMenuScene = new Scene(mainMenuViewController.getView(), 1000, 600);
+            primaryStage.setResizable(false);
+            primaryStage.setTitle("Butting QR Generator");
+            primaryStage.getIcons()
+                    .add(new Image("file:src/main/resources/Butting-Logo.png"));
+            primaryStage.setScene(mainMenuScene);
+            primaryStage.show();
 
-	}
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-	public static void main(String args[]) {
-		launch(args);
-	}
+    }
 }
